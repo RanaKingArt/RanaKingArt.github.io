@@ -4,7 +4,10 @@ body {
 }
 
 .wrap {
-	padding: 0 50px;
+	padding: 0 25px;
+	@media #{$xl-screen} {
+		padding: 0 50px;
+	}
 }
 
 header h1 a {
