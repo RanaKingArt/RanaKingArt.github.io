@@ -1,0 +1,45 @@
+---
+title: Contact
+---
+<p class="editable">I'm currently available for new projects. Get in touch, I'd love to work together.</p>
+
+<form id="contact-form" method="post" action="https://formspree.io/{{ site.formspree }}">
+	<input type="text" name="_gotcha" style="display: none;">
+
+	<div class="contain">
+		<div class="split">
+			<label for="first-name">First name</label>
+			<input type="text" name="first-name" id="first-name" />
+		</div>
+		<div class="split">
+			<label for="surname">Last name</label>
+			<input type="text" name="surname" id="surname" />
+		</div>
+	</div>
+
+	<div class="contain">
+		<div class="split">
+			<label for="email">Email address</label>
+			<input type="email" name="email" id="email" required />
+		</div>
+
+		<div class="split">
+			<label for="subject">Subject</label>
+			<select id="subject" name="subject">
+				<option value="enquiry">Enquiry</option>
+				<option value="suggestion">Suggestion</option>
+				<option value="press">Press</option>
+				<option value="other">Other</option>
+			</select>
+		</div>
+	</div>
+
+	<label for="message">Message</label>
+	<textarea name="message" id="message"></textarea>
+
+	<input id="form-submit-button" type="submit" value="Send message" />
+
+	<p id="form-status"></p>
+</form>
+
+<script src="{{ site.baseurl }}/js/formspree.js"></script>
